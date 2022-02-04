@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import * as S from './styles';
 
 const styles = StyleSheet.create({
   card: {
@@ -22,10 +23,10 @@ const styles = StyleSheet.create({
 export default function Cards(props) {
   return (
     <>
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>{props.Title}</Text>
-        <Text style={styles.cardSubtitle}>{props.Subtitle}</Text>
-      </View>
+      <S.Cards>
+        <S.CardTitle>{props.title}</S.CardTitle>
+        <S.cardSubtitle>{props.subtitle}</S.cardSubtitle>
+      </S.Cards>
     </>
   );
 }
